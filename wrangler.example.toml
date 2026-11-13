@@ -1,0 +1,12 @@
+name = "financia-worker"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Binding de rate-limit (fail-closed): se não configurado, /gemini retorna 503
+[[ratelimit]]
+name = "RATE_LIMITER"
+limit = 60
+period = 60
+
+# Segredos (configure no dashboard ou via wrangler secret put):
+#   GEMINI_API_KEY
